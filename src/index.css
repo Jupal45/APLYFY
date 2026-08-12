@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+/* Clean CSS reset for interactive feedback without any light glow effects */
+
+button, input[type="submit"], [role="button"] {
+  transition: transform 0.15s cubic-bezier(0.2, 0, 0, 1), background-color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease !important;
+}
+
+/* Hover / Touched State: Subtle scale and border/background reaction (NO GLOW) */
+button:hover, input[type="submit"]:hover, [role="button"]:hover {
+  transform: scale(1.04) translateY(-1px) !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+/* Active / Pressed State: Clear tactile press feedback (NO GLOW) */
+button:active, input[type="submit"]:active, [role="button"]:active {
+  transform: scale(0.95) translateY(1px) !important;
+  box-shadow: none !important;
+  filter: brightness(0.9) !important;
+}
+
+/* Clean text hover without any text-glow or filter shadows */
+h1, h2, h3, h4, h5, h6, p, label, span {
+  text-shadow: none !important;
+  filter: none !important;
+}
+
+/* ContentEditable Rich Text Styles (Viñetas y Formatos) */
+[contenteditable="true"] ul, .prose ul {
+  list-style-type: disc !important;
+  margin-left: 1.5rem !important;
+  padding-left: 0.5rem !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+[contenteditable="true"] ol, .prose ol {
+  list-style-type: decimal !important;
+  margin-left: 1.5rem !important;
+  padding-left: 0.5rem !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+[contenteditable="true"] li, .prose li {
+  display: list-item !important;
+  margin-bottom: 0.25rem !important;
+}
+
+[contenteditable="true"] blockquote {
+  border-left: 4px solid #f97316 !important;
+  padding-left: 1rem !important;
+  margin: 0.75rem 0 !important;
+  font-style: italic !important;
+  color: #475569 !important;
+}
+

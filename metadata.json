@@ -1,0 +1,6 @@
+{
+  "name": "APLYFY",
+  "description": "Procesador de textos simple y elegante.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
